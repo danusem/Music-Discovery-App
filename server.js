@@ -1,8 +1,12 @@
 // Require modules
 const express = require('express');
-const port = 3000; // We'll eventually set the port dynamically
 const logger = require('morgan');
+const port = 3000;
+
+require('./config/database');
+
 const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 
 
 // Set up express app
@@ -24,6 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 // Mount Routes app.use()
 
 app.use('/', indexRouter);
+app.use('/users', usersRouter);
 
 // Tell App to listen
 app.listen(port, () => {
