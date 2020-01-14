@@ -1,0 +1,39 @@
+.brand-logo {
+    margin-left: 15px;
+    font-family: 'Permanent Marker', cursive;
+  }
+  
+  .card .card-content .card-title {
+    margin-bottom: 10px;
+  }
+  
+  header {
+    height: 100px;
+  }
+
+  .collection-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #search-row form {
+    padding-top: 20px;
+  }
+  
+  .user-name {
+    position: relative;
+    top: -5px;
+  }
+
+  .btn {
+    margin: 20px;
+  }
+
+  #add-artist-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  

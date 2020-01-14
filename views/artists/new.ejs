@@ -1,0 +1,36 @@
+<%- include('../partials/header.ejs')%>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<div class="container "> 
+    <div class="input-field" >
+        <select>
+            <% artists.forEach(function(p) { %>
+                <option><%= p.name %></option>
+                <% }) %>
+            </select>
+            <label>Please first ensure that the Artist is not in the dropdown</label>
+  </div>
+</div>
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });
+</script>
+<div class="container">
+    
+<form id="add-artist-form" action="/artists" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name">
+        <label>Genre:</label>
+        <input type="text" name="genre">
+        <label>Years Active:</label>
+        <input type="number" name="yearsActive">
+        <label>
+        <input type="checkbox" name="favorite">
+        <span>Favorite</span>        
+        </label>
+        <div>
+        <input class="btn" type="submit" value="Add Artist">
+        </div>
+      </form>
+</div>

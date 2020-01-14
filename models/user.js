@@ -2,10 +2,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema ({
-    googleId: String,
+    name: String,
     email: String,
-    favoriteArtists: [String], 
-    favorieAlbums: [String]
-})
+    googleId: String,
+    artist:[{type: Schema.Types.ObjectId, ref:'Artist'}]
+},{
+    timestamps: true
+    
+});
 
 module.exports = mongoose.model('User', userSchema);

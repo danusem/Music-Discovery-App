@@ -1,14 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel='stylesheet' href='/css/style.css' />
-  <title>Music Discovery</title>
-</head>
-<body>
-  <h1>Music Discovery</h1>
-  <p>Start Listening!</p>
+  <%- include('partials/header.ejs')%>
+
+<% if (user) { %>
+  <div class="container">
+  <h1>Hello <%=user.name%>!</h1>
+  <h3>Artists</h3>
+  <% user.artist.forEach(function(a){ %>
+    <tr>
+      <p>
+      <td><%= a.name %></td>
+      </p>
+      <p>
+      <td><%= a.genre %></td>
+      </p>
+      <td><a href="/artists/<%= a._id %>">DETAILS</a></td>
+    </tr>
+ <% }) %>
+  </div>
+<% } else { %>
+  <div class="container">
+  <h1>Welcome</h1>
+  <h3>Happy Listening! 🎧</h3>
+</div>
+<% } %>
+
+  <%- include('partials/footer.ejs')%>
 </body>
 </html>
