@@ -11,8 +11,19 @@ function newArtist(req, res) {
     });
 }
 
+function createAlbum(req, res) {
+    Artist.findById(req.params.id, function (err, artist) {
+        artist.albums.push(req.body)
+        artist.save(function (err, artist) {
+            res.redirect(`/artists/${artist._id}`)
+        })
+    });
+}
+
 function create(req, res) {
+    req.body.favorite = !!req.body.favorite;
     Artist.create(req.body, function (err, artist) {
+        console.log('artist', artist)
         User.findById(req.user._id, function(err, user){
             user.artist.push(artist._id);
             user.save(function (err){
@@ -25,7 +36,17 @@ function create(req, res) {
     });
 }
 
+function show(req, res) {
+    Artist.findById(req.params.id, function(err, artist) {
+        console.log(artist)
+        res.render('artists/show', { title: 'Artist Detail', artist, user:req.user });
+    });
+}
+
+
 module.exports = {
     new: newArtist, 
-    create
+    create,
+    show,
+    createAlbum
 };

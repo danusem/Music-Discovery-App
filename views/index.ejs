@@ -1,25 +1,30 @@
-  <%- include('partials/header.ejs')%>
+<%- include('partials/header.ejs')%>
+
+<%- include('partials/content.ejs')%>
+
 
 <% if (user) { %>
-  <div class="container">
+  <div class="container list">
   <h1>Hello <%=user.name%>!</h1>
-  <h3>Artists</h3>
+  <h2>Artists</h2>
   <% user.artist.forEach(function(a){ %>
     <tr>
       <p>
       <td><%= a.name %></td>
       </p>
-      <p>
-      <td><%= a.genre %></td>
-      </p>
       <td><a href="/artists/<%= a._id %>">DETAILS</a></td>
+      <!-- <p>
+        <div>Favorite:</div>
+      <td><%= a.favorite ? 'Yes' : 'No' %></td>
+      </p> -->
     </tr>
  <% }) %>
   </div>
 <% } else { %>
-  <div class="container">
-  <h1>Welcome</h1>
-  <h3>Happy Listening! 🎧</h3>
+  <div class="landing">
+    <div class="container">
+  <!-- <h1 class="white">Welcome</h1> -->
+</div>
 </div>
 <% } %>
 

@@ -1,0 +1,49 @@
+<%- include('../partials/header.ejs')%>
+
+<%- include('../partials/content.ejs')%>
+
+
+<section id="show-page" class="container">
+    <h2>Artist Details</h2>
+    <p>
+    <div class="list">Name: </div>
+    <div><%= artist.name %></div>
+    </p>
+    <p>
+    <div class="list">Genre: </div>
+    <div><%= artist.genre %></div>
+    </p>
+    <p>
+    <div class="list">Years Active: </div>
+    <div><%= artist.yearsActive %></div>
+    </p>
+    <p>
+    <div class="list">Favorite: </div>
+    <div><%= artist.favorite ? 'Yes' : 'No' %></div>
+    </p>
+
+
+<h4>Albums</h4>
+<form id="add-album-form" method="POST" action="/artists/<%=artist._id%>/albums">
+  <textarea class="content" name="content"></textarea>
+   <input class="btn" type="submit" value="Add Album">
+</form>
+<% if (artist.albums.length) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Album</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% artist.albums.forEach(function(r) { %>
+        <tr>
+          <td><%= r.content %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+<% } else { %>
+  <h5>No Albums Yet</h5>
+<% } %>
+   

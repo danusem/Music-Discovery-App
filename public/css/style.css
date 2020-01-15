@@ -1,29 +1,14 @@
+body {
+   background-color: rgb(211, 211, 211);
+}
+
 .brand-logo {
     margin-left: 15px;
     font-family: 'Permanent Marker', cursive;
   }
   
-  .card .card-content .card-title {
-    margin-bottom: 10px;
-  }
-  
   header {
     height: 100px;
-  }
-
-  .collection-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  #search-row form {
-    padding-top: 20px;
-  }
-  
-  .user-name {
-    position: relative;
-    top: -5px;
   }
 
   .btn {
@@ -34,6 +19,60 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+  }
+  
+  h1 {
+    font-family: 'Permanent Marker', cursive;
   }
 
-  
+  h2 {
+    font-family: 'Bangers', cursive;
+    text-decoration: underline;
+  }
+
+  h3 {
+    font-family: 'Bangers', cursive;
+  }
+
+  .list {
+    font-family: 'Handlee', cursive;
+    font-size: 20px;
+  }
+
+  .container {
+    margin: auto;
+    padding: 20px;
+}
+
+.landing {
+  background-image: url("/images/vinyl.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.landing h1 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* .landing div.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+} */
+ 
+.content {
+  width: 33%;
+}
+
+#add-album-form {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  color: black !important;
+}
