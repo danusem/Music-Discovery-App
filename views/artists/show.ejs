@@ -3,38 +3,38 @@
 <%- include('../partials/content.ejs')%>
 
 
-<section id="show-page" class="container">
+<section id="show-page" class="container list">
     <h2>Artist Details</h2>
     <p>
-    <div class="list">Name: </div>
+    <div>Name: </div>
     <div><%= artist.name %></div>
     </p>
     <p>
-    <div class="list">Genre: </div>
+    <div>Genre: </div>
     <div><%= artist.genre %></div>
     </p>
     <p>
-    <div class="list">Years Active: </div>
+    <div>Years Active: </div>
     <div><%= artist.yearsActive %></div>
     </p>
     <p>
-    <div class="list">Favorite: </div>
+    <div>Favorite: </div>
     <div><%= artist.favorite ? 'Yes' : 'No' %></div>
     </p>
 
 
-<h4>Albums</h4>
+<h2>Albums</h2>
 <form id="add-album-form" method="POST" action="/artists/<%=artist._id%>/albums">
   <textarea class="content" name="content"></textarea>
    <input class="btn" type="submit" value="Add Album">
 </form>
 <% if (artist.albums.length) { %>
   <table>
-    <thead>
+    <!-- <thead>
       <tr>
         <th>Album</th>
       </tr>
-    </thead>
+    </thead> -->
     <tbody>
       <% artist.albums.forEach(function(r) { %>
         <tr>
