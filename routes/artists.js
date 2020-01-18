@@ -5,6 +5,7 @@ const artistsCtrl = require('../controllers/artists');
 router.get('/artists/new', isAuthenticated, artistsCtrl.new);
 router.post('/artists', artistsCtrl.create);
 router.get('/artists/:id', artistsCtrl.show);
+router.delete('/artists/:id', artistsCtrl.delArtist);
 router.post('/artists/:id/albums', isAuthenticated, artistsCtrl.createAlbum);
 
 function isAuthenticated(req, res, next) {

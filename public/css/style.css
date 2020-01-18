@@ -5,42 +5,41 @@ body {
 .brand-logo {
     margin-left: 15px;
     font-family: 'Permanent Marker', cursive;
-  }
+}
   
-  header {
+header {
     height: 100px;
-  }
+}
 
-  .btn {
+.btn {
     margin: 20px;
-  }
+}
 
-  #add-artist-form {
+#add-artist-form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-  }
+}
   
-  h1 {
+h1 {
     font-family: 'Permanent Marker', cursive;
-  }
+}
 
-  h2 {
+h2 {
     font-family: 'Bangers', cursive;
     text-decoration: underline;
-  }
+}
 
-  h3 {
+h3 {
     font-family: 'Bangers', cursive;
-  }
+}
 
-  .list {
+.list {
     font-family: 'Handlee', cursive;
     font-size: 20px;
-  }
+}
 
-  .container {
+.container {
     margin: auto;
     padding: 20px;
 }
@@ -75,4 +74,8 @@ body {
 
 label {
   color: black !important;
+}
+
+.artist-list > a, .artist-list > form > button {
+  margin-left: 0px;
 }

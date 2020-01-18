@@ -11,6 +11,17 @@ function newArtist(req, res) {
     });
 }
 
+function delArtist(req,res) {
+    Artist.findByIdAndDelete(req.params.id, (err, artist) => {
+        if (err) return res.status(500).send(err);
+        const response = {
+            message: "Artist Deleted",
+            id: artist._id
+        };
+        return res.redirect('/')
+    });
+}
+
 function createAlbum(req, res) {
     Artist.findById(req.params.id, function (err, artist) {
         artist.albums.push(req.body)
@@ -48,5 +59,6 @@ module.exports = {
     new: newArtist, 
     create,
     show,
-    createAlbum
+    createAlbum,
+    delArtist
 };

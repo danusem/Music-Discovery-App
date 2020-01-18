@@ -8,16 +8,15 @@
   <h1>Hello <%=user.name%>!</h1>
   <h2>Artists</h2>
   <% user.artist.forEach(function(a){ %>
-    <tr>
+    <div class="artist-list">
       <p>
-      <td><%= a.name %></td>
+      <%= a.name %>
       </p>
-      <td><a href="/artists/<%= a._id %>">DETAILS</a></td>
-      <!-- <p>
-        <div>Favorite:</div>
-      <td><%= a.favorite ? 'Yes' : 'No' %></td>
-      </p> -->
-    </tr>
+      <a class="btn blue white-text" href="/artists/<%= a._id %>">DETAILS</a>
+      <form action="/artists/<%= a._id %>?_method=DELETE" method="POST">
+      <button type="submit" class="btn red white-text">DELETE ARTIST</button>
+      </form>
+    </div>
  <% }) %>
   </div>
 <% } else { %>
