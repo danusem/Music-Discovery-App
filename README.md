@@ -3,16 +3,16 @@ Music Discovery App is a music tracking application that allows a user to keep t
 
 ## Screenshots
 ![Splash Screen]
-(public/images/Splash Screen.png?raw=true "Splash Screen")
+(public/images/Splash-Screen.png)
 
 ![Home Screen]
-(public/images/Home Screen.png?raw=true "Home Screen")
+(public/images/Home-Screen.png)
 
 ![Artist Detail Page]
-(public/images/Artist Detail Page.png?raw=true "Artist Detail Page")
+(public/images/Artist-Detail Page.png)
 
 ![Add Artist Page]
-(public/images/Add Artist Page.png?raw=true "Add Artist Page")
+(public/images/Add-Artist-Page.png)
 
 ## Technologies Used
 HTML, CSS, Javascript, MongoDB, Express, React, Node.js, OAuth Authentication
