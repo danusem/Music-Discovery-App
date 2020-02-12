@@ -11,7 +11,7 @@ Music Discovery App is a music tracking application that allows a user to keep t
 ![Add Artist Page](./public/images/Add-Artist-Page.png)
 
 ## Technologies Used
-HTML, CSS, Javascript, MongoDB, Express, React, Node.js, OAuth Authentication
+HTML, CSS, Javascript, Express, Node.js, MongoDB, Materalize, OAuth Authentication
 
 ## Getting Started
 https://music-discovery-application.herokuapp.com/
